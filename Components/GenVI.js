@@ -9,7 +9,7 @@ import {
   TextInput,
 } from 'react-native';
 
-const Pokemons = props => {
+const GenII = props => {
   const [pokemons, setPokemons] = useState([]);
   const [searchfield, setsearchfield] = useState('');
 
@@ -18,7 +18,7 @@ const Pokemons = props => {
   }, []);
 
   const fetchPokemons = () => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=72&offset=649')
       .then(response => response.json())
       .then(pokemons => setPokemons(pokemons.results));
   };
@@ -48,13 +48,12 @@ const Pokemons = props => {
                   onPress={() =>
                     props.navigation.navigate('Details', {
                       pokemon: pokemon.name,
-                      type: pokemon.type,
                     })
                   }>
                   <Image
                     style={{width: 150, height: 150}}
                     source={{
-                      uri: `https://img.pokemondb.net/sprites/red-blue/normal/${
+                      uri: `https://img.pokemondb.net/sprites/x-y/normal/${
                         pokemon.name
                       }.png`,
                     }}
@@ -69,7 +68,7 @@ const Pokemons = props => {
   );
 };
 
-export default Pokemons;
+export default GenII;
 
 const styles = StyleSheet.create({
   container: {
