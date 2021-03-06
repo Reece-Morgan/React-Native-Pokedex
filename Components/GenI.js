@@ -28,7 +28,7 @@ const GenI = props => {
       <View style={styles.searchCont}>
         <TextInput
           style={styles.searchfield}
-          placeholder="Search Pokemon"
+          placeholder="Search Pokedex"
           onChangeText={value => setsearchfield(value)}
           value={searchfield}
         />
@@ -100,5 +100,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: 250,
     borderRadius: 50,
+    backgroundColor: '#fff'
   },
 });
