@@ -20,7 +20,7 @@ const Details = props => {
       <Image
         style={styles.image}
         source={{
-          uri: `https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/${
+          uri: `https://img.pokemondb.net/sprites/sword-shield/normal/${
             details.name
           }.png`,
         }}

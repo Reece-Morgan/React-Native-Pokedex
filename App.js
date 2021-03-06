@@ -9,6 +9,8 @@ import GenIII from './Components/GenIII';
 import GenIV from './Components/GenIV';
 import GenV from './Components/GenV';
 import GenVI from './Components/GenVI';
+import GenVII from './Components/GenVII';
+import GenVIII from './Components/GenVIII';
 
 const stackNavigator = createStackNavigator(
   {
@@ -32,6 +34,12 @@ const stackNavigator = createStackNavigator(
     },
     Kalos: {
       screen: GenVI
+    },
+    Alola: {
+      screen: GenVII
+    },
+    Galar: {
+      screen: GenVIII
     },
     Details: {
       screen: Details,

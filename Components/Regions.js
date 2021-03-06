@@ -34,9 +34,9 @@ const Regions = props => {
                     props.navigation.navigate('Kanto')
                 }>
                 <Image
-                    style={{width: 150, height: 150}}
+                    style={{width: 160, height: 160}}
                     source={{
-                    uri: `https://img.pokemondb.net/sprites/red-blue/normal/pikachu.png`,
+                    uri: `https://img.pokemondb.net/boxes/red.jpg`,
                     }}
                 />
                 <Text>Kanto</Text>
@@ -48,9 +48,9 @@ const Regions = props => {
                     props.navigation.navigate('Johto')
                 }>
                 <Image
-                    style={{width: 150, height: 150}}
+                    style={{width: 160, height: 160}}
                     source={{
-                    uri: `https://img.pokemondb.net/sprites/silver/normal/pikachu.png`,
+                    uri: `https://img.pokemondb.net/boxes/gold.jpg`,
                     }}
                 />
                 <Text>Johto</Text>
@@ -62,9 +62,9 @@ const Regions = props => {
                     props.navigation.navigate('Hoenn')
                 }>
                 <Image
-                    style={{width: 150, height: 150}}
+                    style={{width: 160, height: 160}}
                     source={{
-                    uri: `https://img.pokemondb.net/sprites/ruby-sapphire/normal/pikachu.png`,
+                    uri: `https://img.pokemondb.net/boxes/ruby.jpg`,
                     }}
                 />
                 <Text>Hoenn</Text>
@@ -76,9 +76,9 @@ const Regions = props => {
                     props.navigation.navigate('Sinnoh')
                 }>
                 <Image
-                    style={{width: 150, height: 150}}
+                    style={{width: 160, height: 160}}
                     source={{
-                    uri: `https://img.pokemondb.net/sprites/diamond-pearl/normal/pikachu.png`,
+                    uri: `https://img.pokemondb.net/boxes/diamond.jpg`,
                     }}
                 />
                 <Text>Sinnoh</Text>
@@ -90,9 +90,9 @@ const Regions = props => {
                     props.navigation.navigate('Unova')
                 }>
                 <Image
-                    style={{width: 150, height: 150}}
+                    style={{width: 160, height: 160}}
                     source={{
-                    uri: `https://img.pokemondb.net/sprites/black-white/normal/pikachu.png`,
+                    uri: `https://img.pokemondb.net/boxes/white.jpg`,
                     }}
                 />
                 <Text>Unova</Text>
@@ -104,12 +104,40 @@ const Regions = props => {
                     props.navigation.navigate('Kalos')
                 }>
                 <Image
-                    style={{width: 150, height: 150}}
+                    style={{width: 160, height: 160}}
                     source={{
-                    uri: `https://img.pokemondb.net/sprites/x-y/normal/pikachu.png`,
+                    uri: `https://img.pokemondb.net/boxes/x.jpg`,
                     }}
                 />
                 <Text>Kalos</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.card}
+                onPress={() =>
+                    props.navigation.navigate('Alola')
+                }>
+                <Image
+                    style={{width: 160, height: 160}}
+                    source={{
+                    uri: `https://img.pokemondb.net/boxes/sun.jpg`,
+                    }}
+                />
+                <Text>Alola</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.card}
+                onPress={() =>
+                    props.navigation.navigate('Galar')
+                }>
+                <Image
+                    style={{width: 160, height: 160}}
+                    source={{
+                    uri: `https://img.pokemondb.net/logos/sword-logo.jpg`,
+                    }}
+                />
+                <Text>Galar</Text>
             </TouchableOpacity>
         </View>
       </ScrollView>
@@ -125,7 +153,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginTop: 30,
+    paddingTop: 30,
+    backgroundColor: '#fff',
   },
   card: {
     display: 'flex',

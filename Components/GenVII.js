@@ -18,7 +18,7 @@ const GenII = props => {
   }, []);
 
   const fetchPokemons = () => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=135&offset=251')
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=88&offset=721')
       .then(response => response.json())
       .then(pokemons => setPokemons(pokemons.results));
   };
@@ -53,7 +53,7 @@ const GenII = props => {
                   <Image
                     style={{width: 150, height: 150}}
                     source={{
-                      uri: `https://img.pokemondb.net/sprites/ruby-sapphire/normal/${
+                      uri: `https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/normal/${
                         pokemon.name
                       }.png`,
                     }}
